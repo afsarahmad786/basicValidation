@@ -32,12 +32,13 @@ app.post(
 
     // Process registration logic
     // You can access the uploaded file using req.file
-    res.json({
+    res.status(200).json({
+      success: true,
+      data: {
+        /* Response data */
+      },
       message: "User registered successfully",
-      username,
-      email,
-      dob,
-      fileType,
+      errors: [],
     });
   }
 );
